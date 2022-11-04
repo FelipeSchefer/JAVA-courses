@@ -1,0 +1,7 @@
+package aula8b;
+
+public class TotalComprasComposite {
+
+	List<TotalCompras> listaTotalCompras = new ArrayList<TotalCompras>();
+	
+}

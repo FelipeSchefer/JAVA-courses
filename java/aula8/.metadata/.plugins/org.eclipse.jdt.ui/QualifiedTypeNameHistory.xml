@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="javax.swing.plaf.synth.SynthOptionPaneUI"/>
+    <fullyQualifiedTypeName name="aula8.ModuloEstoque"/>
+    <fullyQualifiedTypeName name="aula8.ModuloFinanceiro"/>
+    <fullyQualifiedTypeName name="aula8.ModuloPosVenda"/>
+    <fullyQualifiedTypeName name="aula8.PedidoFacade"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="aula8b.Internet"/>
+    <fullyQualifiedTypeName name="aula8b.TotalComprasComposite"/>
+</qualifiedTypeNameHistroy>
