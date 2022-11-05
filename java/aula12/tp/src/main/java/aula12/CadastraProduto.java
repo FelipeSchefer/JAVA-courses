@@ -25,6 +25,7 @@ public class CadastraProduto {
 			do {
 				Produto produto = new Produto();	
 				
+				System.out.println("---------- CADASTAR PRODUTO ----------");
 				System.out.println("digite o nome do produto");
 				nome = escreva.next();
 				produto.setNome(nome);
@@ -56,6 +57,7 @@ public class CadastraProduto {
 				}
 
 			}while(sair != false);
+			System.out.println("----------------------------------------");
 		}
 		catch(InputMismatchException exception) {
 			System.out.println("Deves por um numero com virgula ' , '. \nNome da exceção " + exception);
@@ -63,7 +65,7 @@ public class CadastraProduto {
 	}
 	
 	public void removerProduto(String nome) {
-		System.out.println("removendo");
+		System.out.println("---------- REMOVER PRODUTO DA LISTA ----------");
 
 		for(Iterator<Produto> iterator = produtoLista.iterator(); iterator.hasNext();) {
 			Produto produto = (Produto) iterator.next();
@@ -72,5 +74,6 @@ public class CadastraProduto {
 				iterator.remove();
 			}
 		}
+		System.out.println("-----------------------------------------------"); 
 	}	
 }

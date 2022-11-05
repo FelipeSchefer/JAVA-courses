@@ -3,23 +3,16 @@ package aula12;
 import java.util.List;
 
 public class ListaProduto {
-
-	List<Produto> produtoLista;
-	
 	
 	public ListaProduto() {}
 	
 	public void listarProdutos(List<Produto> produtoLista) {
-		System.out.println("LISTA DE PRODUTOS");
+		System.out.println("---------- LISTA DE PRODUTOS ----------");
 		
 		for(Produto produto : produtoLista) {
-			System.out.println("itens: " + produto);
+			System.out.println(" itens: produto " + produto.getNome() + 
+							   " preco " + produto.getPreco() );
 		}
-		
-//		for(Produto pd : produtoLista) {
-//			if(pd.getNome().equals(nome)) {
-//				System.out.println("Estás removendo: " + pd.getNome());
-//		}	
+		System.out.println("----------------------------------------");
 	}
-	
 }
