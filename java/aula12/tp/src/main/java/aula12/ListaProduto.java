@@ -15,6 +15,11 @@ public class ListaProduto {
 		for(Produto produto : produtoLista) {
 			System.out.println("itens: " + produto);
 		}
+		
+//		for(Produto pd : produtoLista) {
+//			if(pd.getNome().equals(nome)) {
+//				System.out.println("Estás removendo: " + pd.getNome());
+//		}	
 	}
 	
 }

@@ -9,17 +9,21 @@ public class Main {
 		
 		List<Produto> produtoLista = new ArrayList<Produto>();
 		
-		MonitoraProduto monitora = new MonitoraProduto(3);
-		monitora.start();			
 		
-		MonitoraProduto monitora2 = new MonitoraProduto(15);
-		monitora2.start();			
+//		ConsoleDados contaTresSegundos = new ConsoleDados(3);
+//		contaTresSegundos.start();			
+//		
+//		ConsoleDados novamenteContaTresSegundos = new ConsoleDados(3);
+//		novamenteContaTresSegundos.start();			
+//		
+//		MonitoraProduto contaQuizeSegundos = new MonitoraProduto(15);
+//		contaQuizeSegundos.start();			
 		
-
 		CadastraProduto cadProduto = new CadastraProduto(produtoLista);
 		cadProduto.cadastrarProduto();
-		cadProduto.cadastrarProduto();
+//		cadProduto.cadastrarProduto();
 		
+		cadProduto.removerProduto("caneta");
 		
 
 	

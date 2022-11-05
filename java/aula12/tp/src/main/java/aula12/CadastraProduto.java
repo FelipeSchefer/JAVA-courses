@@ -1,13 +1,12 @@
 package aula12;
 
 import java.util.InputMismatchException;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
 public class CadastraProduto {
 	List<Produto> produtoLista;
-//	CadastraProduto<Produto> cadProduto;
-//	private final int TRES_SEGUNDOS = 3000;
 
 	public CadastraProduto() {}
 	
@@ -17,29 +16,61 @@ public class CadastraProduto {
 	}
 	
 	public void cadastrarProduto() throws InputMismatchException {
-		Produto produto = new Produto();	
 		Scanner escreva = new Scanner(System.in); 
 		String nome = "";
 		Double preco;
-		
+		boolean sair = true;
+		int entrarOuSai = 1;
 		try {
-			System.out.println("digite o nome do produto");
-			nome = escreva.next();
-			produto.setNome(nome);
-			
-			System.out.println("digite o valor");
-			preco = escreva.nextDouble();
-			produto.setPreco(preco);
-			
-			produtoLista.add(produto);
-			System.out.println("nome "+ produto.getNome() + " e o preco " + produto.getPreco());			
+			do {
+				Produto produto = new Produto();	
+				
+				System.out.println("digite o nome do produto");
+				nome = escreva.next();
+				produto.setNome(nome);
+				
+				System.out.println("digite o valor");
+				preco = escreva.nextDouble();
+				produto.setPreco(preco);
+				
+				produtoLista.add(produto);
+				
+				System.out.println("Produto "+ produto.getNome() + " e o preco " + produto.getPreco() + " cadastrados.");
+				
+				while(true) {
+					System.out.println("Precione 1 para cadastrar mais um produto ou 0 para sair");
+					entrarOuSai = escreva.nextInt();
+					
+					if(entrarOuSai == 1) {
+						sair = true;
+						break;
+					}
+					else if(entrarOuSai == 0) {
+						sair = false;
+						break;
+					}
+					else {
+						System.out.println("Voce deve inserir escolher 1 oo 2.");
+						break;
+					}
+				}
+
+			}while(sair != false);
 		}
 		catch(InputMismatchException exception) {
 			System.out.println("Deves por um numero com virgula ' , '. \nNome da exceção " + exception);
 		}
 	}
 	
-	public void removerProduto() {
-		System.out.println("removido"); 
+	public void removerProduto(String nome) {
+		System.out.println("removendo");
+
+		for(Iterator<Produto> iterator = produtoLista.iterator(); iterator.hasNext();) {
+			Produto produto = (Produto) iterator.next();
+			if(nome.equals(produto.getNome())) {
+				System.out.println("Estás removendo: " + nome);
+				iterator.remove();
+			}
+		}
 	}	
 }
