@@ -57,7 +57,7 @@ public class CadastraProduto {
 				}
 
 			}while(sair != false);
-			System.out.println("----------------------------------------");
+			System.out.println("----------------------------------------\n");
 		}
 		catch(InputMismatchException exception) {
 			System.out.println("Deves por um numero com virgula ' , '. \nNome da exceção " + exception);
@@ -74,6 +74,6 @@ public class CadastraProduto {
 				iterator.remove();
 			}
 		}
-		System.out.println("-----------------------------------------------"); 
+		System.out.println("-----------------------------------------------\n"); 
 	}	
 }
