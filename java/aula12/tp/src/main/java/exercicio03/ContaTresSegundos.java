@@ -1,8 +1,11 @@
-package aula12;
+package exercicio03;
 
+import java.util.List;
 
 public class ContaTresSegundos extends Thread {
-	private final int TRES_SEGUNDOS = 3000;
+	private final int QUINZE_SEGUNDOS = 5000;
+	List<Produto> produtoLista;
+	ListaProduto verificaListaProduto = new ListaProduto();
 
 	public void run() {
 		imprimirTresSegundos();
@@ -13,7 +16,7 @@ public class ContaTresSegundos extends Thread {
 		try {			
 			while(true) {
 				System.out.println("Trimestral: " + i++);
-				Thread.sleep(TRES_SEGUNDOS);
+				Thread.sleep(QUINZE_SEGUNDOS);
 			}
 		}
 		catch(InterruptedException e) {

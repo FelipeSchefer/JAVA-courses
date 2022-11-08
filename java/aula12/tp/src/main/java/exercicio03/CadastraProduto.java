@@ -1,4 +1,4 @@
-package aula12;
+package exercicio03;
 
 import java.util.InputMismatchException;
 import java.util.Iterator;
