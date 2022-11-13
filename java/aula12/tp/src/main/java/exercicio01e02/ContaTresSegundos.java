@@ -5,6 +5,7 @@ public class ContaTresSegundos extends Thread {
 	private final int TRES_SEGUNDOS = 3000;
 
 	public void run() {
+		setName("Rodando a cada 3 segundos");
 		imprimirTresSegundos();
 	}
 

@@ -14,11 +14,8 @@ public class Main {
 		produtoLista.add(new Produto("caneta", 2.20d));
 		produtoLista.add(new Produto("copo", 3.30d));
 
-		ContaTresSegundos contaTresSegundos = new ContaTresSegundos();
-		contaTresSegundos.start();			
-		
-//		ContaQuizeSegundos contaQuizeSegundos = new ContaQuizeSegundos();
-//		contaQuizeSegundos.run();
+		ContaQuizeSegundos contaQuizeSegundos = new ContaQuizeSegundos(produtoLista);
+		contaQuizeSegundos.start();
 		
 		CadastraProduto cadProduto = new CadastraProduto(produtoLista);
 		boolean sair = false;
@@ -27,7 +24,7 @@ public class Main {
 			
 			System.out.println("Para cadastrar um produto digite c ");
 			System.out.println("Para remover um produto digite r ");
-			System.out.println("Para siar do programar digite s ");
+			System.out.println("Para siar do programar digite s\n ");
 					
 			String opcao = "";
 			opcao = escreva.next();
