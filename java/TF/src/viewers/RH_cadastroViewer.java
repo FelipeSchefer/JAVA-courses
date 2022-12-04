@@ -5,7 +5,6 @@ import java.util.Scanner;
 import factory.PessoaFactory;
 import models.CalculaSalario;
 import models.CalculaSalarioProfFrances;
-import models.Cargos;
 import models.CargoRH;
 import models.Endereco;
 import models.Funcionario;
@@ -20,7 +19,7 @@ public class RH_cadastroViewer {
 		String rua = "";
 		Integer numero = 0;
 		String complemento = "";
-		Cargos cargos = new CargoRH();
+		CargoRH cargos = new CargoRH();
 		String nomeCargo = "";
 		String cargo = "";
 		String mostraSalario = "";

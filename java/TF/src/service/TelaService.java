@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 import models.Aluno;
 import models.Funcionario;
-import threads.ContaUmMinutoListaAlunos;
+import threads.ContaTempoListaAlunos;
 import viewers.AlertaViewer;
 import viewers.AlunoCadastroViewer;
 import viewers.BemVindoViewer;
@@ -23,15 +23,14 @@ public class TelaService {
 		List<Aluno> alunos = new ArrayList<>();
 		List<Funcionario> funcionarios = new ArrayList<>();
 		
-		ContaUmMinutoListaAlunos listaCursoThread = new ContaUmMinutoListaAlunos(alunos);
+		ContaTempoListaAlunos listaCursoThread = new ContaTempoListaAlunos(alunos , funcionarios);
 		listaCursoThread.start();
 		
 		boolean sair = false;
 		boolean encerrarAplicacao = false;
+		EscolhaDoBD_viewer escolhaBD = new EscolhaDoBD_viewer();
+		encerrarAplicacao = escolhaBD.escolherBD();
 		do {
-			EscolhaDoBD_viewer escolhaBD = new EscolhaDoBD_viewer();
-			encerrarAplicacao = escolhaBD.escolherBD();
-			
 			if(!encerrarAplicacao) {
 				BemVindoViewer bv = new BemVindoViewer();
 				bv.bemVindo();

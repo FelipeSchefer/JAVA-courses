@@ -6,7 +6,6 @@ import java.util.Scanner;
 import factory.PessoaFactory;
 import models.CalculaSalario;
 import models.CalculaSalarioProfFrances;
-import models.Cargos;
 import models.CargoProfessor;
 import models.Endereco;
 import models.Funcionario;
@@ -25,7 +24,7 @@ public class ProfessorCadastroViewer {
 		String rua = "";
 		Integer numero = 0;
 		String complemento = "";
-		Cargos cargos = new CargoProfessor();
+		CargoProfessor cargos = new CargoProfessor();
 		String nomeCargo = "";
 		String cargo = "";
 		String mostraSalario = "";
@@ -60,7 +59,7 @@ public class ProfessorCadastroViewer {
 		boolean erro = false;
 		do {
 			System.out.print(" * Nome da Profissão: ");
-			nomeCargo = escreva.next();
+ 		    nomeCargo= escreva.nextLine();
 			cargo = cargos.escolherCargos(nomeCargo);
 			erro = cargo.equals("erro");
 			

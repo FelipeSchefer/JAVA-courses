@@ -54,7 +54,6 @@ public class AlunoCadastroViewer {
 		do {
 			System.out.print(" * Idioma do curso: ");
 			nomeCurso = escreva.next();
-			
 			curso = cursos.escolherCursos(nomeCurso);
 			erro = curso.equals("erro");
 		}while(erro);
