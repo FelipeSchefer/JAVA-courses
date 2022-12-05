@@ -4,11 +4,11 @@ import java.util.Arrays;
 import java.util.List;
 
 public class CargoProfessor implements Cargos{
-	List<String> cargos =  Arrays.asList( "Profesor de Português", 
-										  "Profesor de Espanhol",
-										  "Profesor de Franês",
-										  "Profesor de Inglês",
-										  "Profesor de Japonês");
+	List<String> cargos =  Arrays.asList( "Professor de Português", 
+										  "Professor de Espanhol",
+										  "Professor de Franês",
+										  "Professor de Inglês",
+										  "Professor de Japonês");
 	@Override
 	public String escolherCargos(String profissao){
 		boolean temIdioma = false;		

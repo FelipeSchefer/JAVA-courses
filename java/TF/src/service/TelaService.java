@@ -16,6 +16,7 @@ import viewers.FuncionarioCadastroViewer;
 
 public class TelaService {
 
+	@SuppressWarnings("deprecation")
 	public void iniciarPrograma() throws Exception {
 		@SuppressWarnings("resource")
 		Scanner escreva = new Scanner(System.in); 

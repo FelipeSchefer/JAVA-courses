@@ -18,10 +18,5 @@ public abstract class CalculaSalario {
 		this.horas = horas;
 	}
 
-	public String somar() {
-		
-		soma = valorHora * horas;
-		
-		return "Profissão: " + profissao + " Salario de: " + soma ;
-	}
+	public abstract String somar();
 }

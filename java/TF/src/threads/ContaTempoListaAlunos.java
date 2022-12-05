@@ -6,7 +6,7 @@ import models.Aluno;
 import models.Funcionario;
 
 public class ContaTempoListaAlunos extends Thread{
-	private final long TEMPO = 180000;
+	private final long TEMPO = 300000;
 	List<Aluno> listaAluno;
 	List<Funcionario> listaFuncionarios;
 	
@@ -23,6 +23,8 @@ public class ContaTempoListaAlunos extends Thread{
 	public void cronometrarQuizeSegundos() {
 		try {
 			while(true) { 
+				Thread.sleep(TEMPO);
+				
 				System.out.println("\n=============================================================================");
 				System.out.println("\nTamanho da lista de Alunos " + this.listaAluno.size());
 			
@@ -30,7 +32,7 @@ public class ContaTempoListaAlunos extends Thread{
 					System.out.println(lista.toString());
 				}
 				
-				System.out.println("\n=============================================================================");
+				System.out.print  ("\n=============================================================================");
 				
 				System.out.println("\n=============================================================================");
 				System.out.println("\nTamanho da lista de Funcionarios " + this.listaFuncionarios.size());
@@ -39,9 +41,7 @@ public class ContaTempoListaAlunos extends Thread{
 					System.out.println(lista.toString());
 				}
 				
-				System.out.println("\n=============================================================================");
-				
-				Thread.sleep(TEMPO);
+				System.out.println("\n=============================================================================");	
 			}
 		}
 		catch(InterruptedException e) {
